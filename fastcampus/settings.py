@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get("SETTINGS_SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "elb-12503786.ap-northeast-2.elb.amazonaws.com",
+    os.environ.get("ALLOWED_HOST_EC2"),
+    os.environ.get("ALLOWED_HOST_ELB"),
     "*",
 ]
 # 'ec2-3-19-234-212.us-east-2.compute.amazonaws.com','fastcampusalb-864406941.us-east-2.elb.amazonaws.com']
